@@ -20,6 +20,9 @@ namespace Desktop
             InitializeComponent();
         }
 
+        SqlConnection conexao = new SqlConnection(@"Data Source=34.171.87.74;Initial Catalog=GREENLIFE_BD;Persist Security Info=True;User ID=EquipeGL;Password=***********;Encrypt=False");
+        SqlCommand comando = new SqlCommand();
+        //SqlDataReader data; 
        
         private void FormShow(Form frm)
         {

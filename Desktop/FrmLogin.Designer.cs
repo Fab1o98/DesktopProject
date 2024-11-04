@@ -34,7 +34,6 @@
             this.labelUsuario = new System.Windows.Forms.Label();
             this.labelSenha = new System.Windows.Forms.Label();
             this.btnConectar = new System.Windows.Forms.Button();
-            this.checkBoxLembre = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -44,7 +43,7 @@
             // 
             this.textBoxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxUsuario.Location = new System.Drawing.Point(419, 150);
-            this.textBoxUsuario.MaxLength = 6;
+            this.textBoxUsuario.MaxLength = 15;
             this.textBoxUsuario.Name = "textBoxUsuario";
             this.textBoxUsuario.Size = new System.Drawing.Size(254, 20);
             this.textBoxUsuario.TabIndex = 1;
@@ -91,16 +90,6 @@
             this.btnConectar.UseVisualStyleBackColor = true;
             this.btnConectar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // checkBoxLembre
-            // 
-            this.checkBoxLembre.AutoSize = true;
-            this.checkBoxLembre.Location = new System.Drawing.Point(419, 239);
-            this.checkBoxLembre.Name = "checkBoxLembre";
-            this.checkBoxLembre.Size = new System.Drawing.Size(84, 17);
-            this.checkBoxLembre.TabIndex = 6;
-            this.checkBoxLembre.Text = "Lembrar-me ";
-            this.checkBoxLembre.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -129,7 +118,6 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(715, 349);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.checkBoxLembre);
             this.Controls.Add(this.btnConectar);
             this.Controls.Add(this.labelSenha);
             this.Controls.Add(this.labelUsuario);
@@ -154,7 +142,6 @@
         private System.Windows.Forms.Label labelUsuario;
         private System.Windows.Forms.Label labelSenha;
         private System.Windows.Forms.Button btnConectar;
-        private System.Windows.Forms.CheckBox checkBoxLembre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

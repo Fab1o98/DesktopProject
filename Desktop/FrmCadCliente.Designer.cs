@@ -28,31 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxTell1 = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCadastrarCliente = new System.Windows.Forms.Button();
+            this.btnVoltaInicio = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.textEmail = new System.Windows.Forms.TextBox();
+            this.maskCnpj = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.textBoxNomeCliente = new System.Windows.Forms.TextBox();
+            this.btnLimparCadastroCliente = new System.Windows.Forms.Button();
+            this.maskedTextBoxTellOp = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.textBoxEndereco = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxNumero = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBoxUserCliente = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textSenha = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // maskedTextBox2
+            // maskedTextBoxTell1
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(131, 280);
-            this.maskedTextBox2.Mask = "(00)00000-0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(291, 20);
-            this.maskedTextBox2.TabIndex = 39;
+            this.maskedTextBoxTell1.Location = new System.Drawing.Point(131, 280);
+            this.maskedTextBoxTell1.Mask = "(00)00000-0000";
+            this.maskedTextBoxTell1.Name = "maskedTextBoxTell1";
+            this.maskedTextBoxTell1.Size = new System.Drawing.Size(291, 20);
+            this.maskedTextBoxTell1.TabIndex = 39;
             // 
             // label8
             // 
@@ -85,23 +93,24 @@
             this.label1.Text = "Cadastro de Clientes";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button2
+            // btnCadastrarCliente
             // 
-            this.button2.Location = new System.Drawing.Point(819, 641);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(74, 28);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "Cadastrar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCadastrarCliente.Location = new System.Drawing.Point(819, 641);
+            this.btnCadastrarCliente.Name = "btnCadastrarCliente";
+            this.btnCadastrarCliente.Size = new System.Drawing.Size(74, 28);
+            this.btnCadastrarCliente.TabIndex = 36;
+            this.btnCadastrarCliente.Text = "Cadastrar";
+            this.btnCadastrarCliente.UseVisualStyleBackColor = true;
+            this.btnCadastrarCliente.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnVoltaInicio
             // 
-            this.button1.Location = new System.Drawing.Point(12, 641);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 28);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "Voltar ao Inicio";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnVoltaInicio.Location = new System.Drawing.Point(12, 641);
+            this.btnVoltaInicio.Name = "btnVoltaInicio";
+            this.btnVoltaInicio.Size = new System.Drawing.Size(87, 28);
+            this.btnVoltaInicio.TabIndex = 35;
+            this.btnVoltaInicio.Text = "Voltar ao Inicio";
+            this.btnVoltaInicio.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -112,20 +121,22 @@
             this.label5.TabIndex = 30;
             this.label5.Text = "E-mail";
             // 
-            // textBox2
+            // textEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(131, 339);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(634, 20);
-            this.textBox2.TabIndex = 29;
+            this.textEmail.Location = new System.Drawing.Point(131, 339);
+            this.textEmail.Name = "textEmail";
+            this.textEmail.Size = new System.Drawing.Size(634, 20);
+            this.textEmail.TabIndex = 29;
             // 
-            // maskedTextBox1
+            // maskCnpj
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(131, 222);
-            this.maskedTextBox1.Mask = "000.000.000.00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(637, 20);
-            this.maskedTextBox1.TabIndex = 28;
+            this.maskCnpj.Location = new System.Drawing.Point(131, 222);
+            this.maskCnpj.Mask = "000.000.000.00";
+            this.maskCnpj.Name = "maskCnpj";
+            this.maskCnpj.Size = new System.Drawing.Size(634, 20);
+            this.maskCnpj.TabIndex = 28;
+            this.maskCnpj.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.maskCnpj.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskCnpj_MaskInputRejected);
             // 
             // label4
             // 
@@ -145,29 +156,29 @@
             this.label2.TabIndex = 23;
             this.label2.Text = "Nome";
             // 
-            // textBox1
+            // textBoxNomeCliente
             // 
-            this.textBox1.Location = new System.Drawing.Point(131, 169);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(634, 20);
-            this.textBox1.TabIndex = 22;
+            this.textBoxNomeCliente.Location = new System.Drawing.Point(131, 169);
+            this.textBoxNomeCliente.Name = "textBoxNomeCliente";
+            this.textBoxNomeCliente.Size = new System.Drawing.Size(634, 20);
+            this.textBoxNomeCliente.TabIndex = 22;
             // 
-            // button3
+            // btnLimparCadastroCliente
             // 
-            this.button3.Location = new System.Drawing.Point(739, 641);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(74, 28);
-            this.button3.TabIndex = 40;
-            this.button3.Text = "Limpar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnLimparCadastroCliente.Location = new System.Drawing.Point(739, 641);
+            this.btnLimparCadastroCliente.Name = "btnLimparCadastroCliente";
+            this.btnLimparCadastroCliente.Size = new System.Drawing.Size(74, 28);
+            this.btnLimparCadastroCliente.TabIndex = 40;
+            this.btnLimparCadastroCliente.Text = "Limpar";
+            this.btnLimparCadastroCliente.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox3
+            // maskedTextBoxTellOp
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(474, 280);
-            this.maskedTextBox3.Mask = "(00)00000-0000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(294, 20);
-            this.maskedTextBox3.TabIndex = 42;
+            this.maskedTextBoxTellOp.Location = new System.Drawing.Point(474, 280);
+            this.maskedTextBoxTellOp.Mask = "(00)00000-0000";
+            this.maskedTextBoxTellOp.Name = "maskedTextBoxTellOp";
+            this.maskedTextBoxTellOp.Size = new System.Drawing.Size(291, 20);
+            this.maskedTextBoxTellOp.TabIndex = 42;
             // 
             // label3
             // 
@@ -178,29 +189,105 @@
             this.label3.TabIndex = 41;
             this.label3.Text = "Telefone Opcional ";
             // 
+            // textBoxEndereco
+            // 
+            this.textBoxEndereco.Location = new System.Drawing.Point(131, 395);
+            this.textBoxEndereco.Name = "textBoxEndereco";
+            this.textBoxEndereco.Size = new System.Drawing.Size(397, 20);
+            this.textBoxEndereco.TabIndex = 43;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(128, 379);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 13);
+            this.label6.TabIndex = 44;
+            this.label6.Text = "Endereço";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(570, 379);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(19, 13);
+            this.label7.TabIndex = 45;
+            this.label7.Text = "Nº";
+            // 
+            // textBoxNumero
+            // 
+            this.textBoxNumero.Location = new System.Drawing.Point(570, 395);
+            this.textBoxNumero.Name = "textBoxNumero";
+            this.textBoxNumero.Size = new System.Drawing.Size(195, 20);
+            this.textBoxNumero.TabIndex = 46;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(177, 444);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 13);
+            this.label9.TabIndex = 48;
+            this.label9.Text = "Usúario";
+            // 
+            // textBoxUserCliente
+            // 
+            this.textBoxUserCliente.Location = new System.Drawing.Point(180, 460);
+            this.textBoxUserCliente.Name = "textBoxUserCliente";
+            this.textBoxUserCliente.Size = new System.Drawing.Size(388, 20);
+            this.textBoxUserCliente.TabIndex = 47;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(177, 500);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(38, 13);
+            this.label10.TabIndex = 50;
+            this.label10.Text = "Senha";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // textSenha
+            // 
+            this.textSenha.Location = new System.Drawing.Point(180, 516);
+            this.textSenha.Name = "textSenha";
+            this.textSenha.PasswordChar = '*';
+            this.textSenha.Size = new System.Drawing.Size(388, 20);
+            this.textSenha.TabIndex = 49;
+            // 
             // FrmCadCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(905, 681);
-            this.Controls.Add(this.maskedTextBox3);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.textSenha);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.textBoxUserCliente);
+            this.Controls.Add(this.textBoxNumero);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBoxEndereco);
+            this.Controls.Add(this.maskedTextBoxTellOp);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.btnLimparCadastroCliente);
+            this.Controls.Add(this.maskedTextBoxTell1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCadastrarCliente);
+            this.Controls.Add(this.btnVoltaInicio);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.textEmail);
+            this.Controls.Add(this.maskCnpj);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxNomeCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCadCliente";
             this.Text = "FrmCadCliente";
+            this.Load += new System.EventHandler(this.FrmCadCliente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -210,20 +297,28 @@
 
         #endregion
 
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxTell1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCadastrarCliente;
+        private System.Windows.Forms.Button btnVoltaInicio;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.TextBox textEmail;
+        private System.Windows.Forms.MaskedTextBox maskCnpj;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.TextBox textBoxNomeCliente;
+        private System.Windows.Forms.Button btnLimparCadastroCliente;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxTellOp;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBoxEndereco;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxNumero;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBoxUserCliente;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textSenha;
     }
 }

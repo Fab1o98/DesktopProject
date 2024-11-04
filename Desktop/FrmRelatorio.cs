@@ -26,5 +26,10 @@ namespace Desktop
         {
 
         }
+
+        private void btnVoltarRelatorio_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

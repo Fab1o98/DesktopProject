@@ -19,7 +19,7 @@ namespace Desktop
             InitializeComponent();
         }
 
-        SqlConnection bdGreen = new SqlConnection(@"Data Source=34.151.243.209;Initial Catalog=GREENLIFE_BD;User ID=gustavo;Password=Italia20@;Encrypt=True;TrustServerCertificate=True");
+        SqlConnection bdGreen = new SqlConnection(@"Data Source=34.171.87.74;Initial Catalog=GREENLIFE_BD;Persist Security Info=True;User ID=EquipeGL;Password=Pipizinhobolado@;Encrypt=False");
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -29,16 +29,9 @@ namespace Desktop
         // Botão conectar
         private void button1_Click(object sender, EventArgs e)
         {
-            //bdGreen.Open();
-            //string query = "SELECT * FROM Usuarios WHERE nome = @usuario AND senha = @senha";
-            //SqlCommand cmd = new SqlCommand(query, bdGreen);
-            //cmd.Parameters.AddWithValue("@usuario", textBoxUsuario.Text);
-            //cmd.Parameters.AddWithValue("@senha", textBoxSenha.Text);
-            //SqlDataAdapter dp = new SqlDataAdapter(cmd);
-            //DataTable dt = new DataTable();
-            //dp.Fill(dt);
+           
 
-            string query = "SELECT * FROM Usuarios WHERE nome = '" + textBoxUsuario.Text + "' AND senha = '" + textBoxSenha.Text + "' ";
+            string query = "SELECT * FROM Colaboradores WHERE Usuario = '" + textBoxUsuario.Text + "' AND Senha = '" + textBoxSenha.Text + "' ";
             SqlDataAdapter dp = new SqlDataAdapter(query,bdGreen);  
             DataTable dt = new DataTable();
             dp.Fill(dt);
