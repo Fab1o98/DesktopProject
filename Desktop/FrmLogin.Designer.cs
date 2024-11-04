@@ -42,7 +42,7 @@
             // textBoxUsuario
             // 
             this.textBoxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxUsuario.Location = new System.Drawing.Point(419, 150);
+            this.textBoxUsuario.Location = new System.Drawing.Point(414, 117);
             this.textBoxUsuario.MaxLength = 15;
             this.textBoxUsuario.Name = "textBoxUsuario";
             this.textBoxUsuario.Size = new System.Drawing.Size(254, 20);
@@ -52,7 +52,7 @@
             // textBoxSenha
             // 
             this.textBoxSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxSenha.Location = new System.Drawing.Point(420, 213);
+            this.textBoxSenha.Location = new System.Drawing.Point(415, 180);
             this.textBoxSenha.Name = "textBoxSenha";
             this.textBoxSenha.PasswordChar = '*';
             this.textBoxSenha.Size = new System.Drawing.Size(254, 20);
@@ -63,7 +63,7 @@
             this.labelUsuario.AutoSize = true;
             this.labelUsuario.BackColor = System.Drawing.Color.Transparent;
             this.labelUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsuario.Location = new System.Drawing.Point(416, 129);
+            this.labelUsuario.Location = new System.Drawing.Point(411, 96);
             this.labelUsuario.Name = "labelUsuario";
             this.labelUsuario.Size = new System.Drawing.Size(54, 16);
             this.labelUsuario.TabIndex = 3;
@@ -73,7 +73,7 @@
             // 
             this.labelSenha.AutoSize = true;
             this.labelSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSenha.Location = new System.Drawing.Point(417, 192);
+            this.labelSenha.Location = new System.Drawing.Point(412, 159);
             this.labelSenha.Name = "labelSenha";
             this.labelSenha.Size = new System.Drawing.Size(49, 16);
             this.labelSenha.TabIndex = 4;
@@ -82,7 +82,7 @@
             // 
             // btnConectar
             // 
-            this.btnConectar.Location = new System.Drawing.Point(499, 292);
+            this.btnConectar.Location = new System.Drawing.Point(494, 259);
             this.btnConectar.Name = "btnConectar";
             this.btnConectar.Size = new System.Drawing.Size(89, 24);
             this.btnConectar.TabIndex = 5;
@@ -94,7 +94,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(414, 54);
+            this.label1.Location = new System.Drawing.Point(409, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 29);
             this.label1.TabIndex = 0;
@@ -106,7 +106,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(382, 349);
+            this.pictureBox1.Size = new System.Drawing.Size(382, 323);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -116,7 +116,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(715, 349);
+            this.ClientSize = new System.Drawing.Size(715, 323);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnConectar);
             this.Controls.Add(this.labelSenha);
@@ -125,6 +125,7 @@
             this.Controls.Add(this.textBoxUsuario);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

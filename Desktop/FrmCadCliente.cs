@@ -83,5 +83,10 @@ namespace Desktop
         {
 
         }
+
+        private void btnVoltarCliente_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

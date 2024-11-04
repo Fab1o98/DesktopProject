@@ -22,7 +22,7 @@ namespace Desktop
 
         SqlConnection conexao = new SqlConnection(@"Data Source=34.171.87.74;Initial Catalog=GREENLIFE_BD;Persist Security Info=True;User ID=EquipeGL;Password=***********;Encrypt=False");
         SqlCommand comando = new SqlCommand();
-        //SqlDataReader data; 
+        
        
         private void FormShow(Form frm)
         {
@@ -72,18 +72,14 @@ namespace Desktop
         {
             ActiveButton(btnInicio);
             ActiveFormClose();
+            
         }
 
         private void btnEstoque_Click(object sender, EventArgs e)
         {
             ActiveButton(btnEstoque);
-            FormShow(new FrmEstoque()); 
-        }
-
-        private void btnPedido_Click(object sender, EventArgs e)
-        {
-            ActiveButton(btnPedido);
-            FormShow(new FrmPedido());
+            FormShow(new FrmEstoque());
+            
         }
 
         private void btnCadFuncionario_Click(object sender, EventArgs e)
@@ -119,5 +115,7 @@ namespace Desktop
             ActiveButton(btnCadCliente);
             FormShow(new FrmCadCliente());
         }
+
+      
     }
 }

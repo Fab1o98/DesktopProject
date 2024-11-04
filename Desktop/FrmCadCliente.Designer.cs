@@ -33,7 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCadastrarCliente = new System.Windows.Forms.Button();
-            this.btnVoltaInicio = new System.Windows.Forms.Button();
+            this.btnVoltarCliente = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textEmail = new System.Windows.Forms.TextBox();
             this.maskCnpj = new System.Windows.Forms.MaskedTextBox();
@@ -103,14 +103,15 @@
             this.btnCadastrarCliente.UseVisualStyleBackColor = true;
             this.btnCadastrarCliente.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btnVoltaInicio
+            // btnVoltarCliente
             // 
-            this.btnVoltaInicio.Location = new System.Drawing.Point(12, 641);
-            this.btnVoltaInicio.Name = "btnVoltaInicio";
-            this.btnVoltaInicio.Size = new System.Drawing.Size(87, 28);
-            this.btnVoltaInicio.TabIndex = 35;
-            this.btnVoltaInicio.Text = "Voltar ao Inicio";
-            this.btnVoltaInicio.UseVisualStyleBackColor = true;
+            this.btnVoltarCliente.Location = new System.Drawing.Point(12, 641);
+            this.btnVoltarCliente.Name = "btnVoltarCliente";
+            this.btnVoltarCliente.Size = new System.Drawing.Size(87, 28);
+            this.btnVoltarCliente.TabIndex = 35;
+            this.btnVoltarCliente.Text = "Voltar ao Inicio";
+            this.btnVoltarCliente.UseVisualStyleBackColor = true;
+            this.btnVoltarCliente.Click += new System.EventHandler(this.btnVoltarCliente_Click);
             // 
             // label5
             // 
@@ -261,6 +262,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(905, 681);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textSenha);
@@ -277,7 +279,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCadastrarCliente);
-            this.Controls.Add(this.btnVoltaInicio);
+            this.Controls.Add(this.btnVoltarCliente);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textEmail);
             this.Controls.Add(this.maskCnpj);
@@ -302,7 +304,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCadastrarCliente;
-        private System.Windows.Forms.Button btnVoltaInicio;
+        private System.Windows.Forms.Button btnVoltarCliente;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textEmail;
         private System.Windows.Forms.MaskedTextBox maskCnpj;

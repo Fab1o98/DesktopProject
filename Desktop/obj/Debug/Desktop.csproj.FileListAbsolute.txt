@@ -12,5 +12,4 @@ C:\Users\Fabio\Documents\Unip\PIM\PIM - 4 Semestre\Desktop\Desktop\obj\Debug\Des
 C:\Users\Fabio\Documents\Unip\PIM\PIM - 4 Semestre\Desktop\Desktop\obj\Debug\Desktop.FrmCadFuncionario.resources
 C:\Users\Fabio\Documents\Unip\PIM\PIM - 4 Semestre\Desktop\Desktop\obj\Debug\Desktop.FrmEstoque.resources
 C:\Users\Fabio\Documents\Unip\PIM\PIM - 4 Semestre\Desktop\Desktop\obj\Debug\Desktop.FrmRelatorio.resources
-C:\Users\Fabio\Documents\Unip\PIM\PIM - 4 Semestre\Desktop\Desktop\obj\Debug\Desktop.FrmPedido.resources
 C:\Users\Fabio\Documents\Unip\PIM\PIM - 4 Semestre\Desktop\Desktop\obj\Debug\Desktop.FrmCadCliente.resources
