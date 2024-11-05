@@ -28,6 +28,19 @@ namespace Desktop
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBoxNomeCliente.Text) ||
+                string.IsNullOrWhiteSpace(maskCnpj.Text) ||
+                string.IsNullOrWhiteSpace(maskedTextBoxTell1.Text) ||
+                string.IsNullOrWhiteSpace(textBoxEndereco.Text) ||
+                string.IsNullOrWhiteSpace(textBoxNumero.Text) ||
+                string.IsNullOrWhiteSpace(textEmail.Text) ||
+                string.IsNullOrWhiteSpace(textBoxUserCliente.Text) ||
+                string.IsNullOrWhiteSpace(textSenha.Text))
+            {
+                MessageBox.Show("Digite os campos necessários.");
+                return; 
+            }
+
             SqlConnection conexao = new SqlConnection(@"Data Source=34.171.87.74;Initial Catalog=GREENLIFE_BD;Persist Security Info=True;User ID=sqlserver;Password=Pipizinhobolado@;Encrypt=False");
 
 
@@ -88,5 +101,20 @@ namespace Desktop
         {
             this.Hide();
         }
+
+        private void btnLimparCadastroCliente_Click(object sender, EventArgs e)
+        {
+            textBoxNomeCliente.Clear();
+            maskCnpj.Clear();
+            maskedTextBoxTell1.Clear();
+            maskedTextBoxTellOp.Clear();
+            textEmail.Clear();
+            textBoxEndereco.Clear();
+            textBoxNumero.Clear();
+            textBoxUserCliente.Clear();
+            textSenha.Clear();
+        }
+
+       
     }
 }

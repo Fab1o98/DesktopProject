@@ -51,6 +51,7 @@
             this.textBoxUserCliente = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textSenha = new System.Windows.Forms.TextBox();
+            this.labelInfo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,9 +68,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(128, 264);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 13);
+            this.label8.Size = new System.Drawing.Size(58, 13);
             this.label8.TabIndex = 38;
-            this.label8.Text = "Telefone";
+            this.label8.Text = "Telefone 1";
             // 
             // panel1
             // 
@@ -172,6 +173,7 @@
             this.btnLimparCadastroCliente.TabIndex = 40;
             this.btnLimparCadastroCliente.Text = "Limpar";
             this.btnLimparCadastroCliente.UseVisualStyleBackColor = true;
+            this.btnLimparCadastroCliente.Click += new System.EventHandler(this.btnLimparCadastroCliente_Click);
             // 
             // maskedTextBoxTellOp
             // 
@@ -186,9 +188,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(471, 264);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 13);
+            this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 41;
-            this.label3.Text = "Telefone Opcional ";
+            this.label3.Text = "Telefone 2";
             // 
             // textBoxEndereco
             // 
@@ -257,6 +259,15 @@
             this.textSenha.Size = new System.Drawing.Size(388, 20);
             this.textSenha.TabIndex = 49;
             // 
+            // labelInfo
+            // 
+            this.labelInfo.AutoSize = true;
+            this.labelInfo.Location = new System.Drawing.Point(716, 264);
+            this.labelInfo.Name = "labelInfo";
+            this.labelInfo.Size = new System.Drawing.Size(55, 13);
+            this.labelInfo.TabIndex = 51;
+            this.labelInfo.Text = "(Opcional)";
+            // 
             // FrmCadCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,6 +275,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(905, 681);
+            this.Controls.Add(this.labelInfo);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textSenha);
             this.Controls.Add(this.label9);
@@ -288,7 +300,9 @@
             this.Controls.Add(this.textBoxNomeCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCadCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmCadCliente";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmCadCliente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -322,5 +336,6 @@
         private System.Windows.Forms.TextBox textBoxUserCliente;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textSenha;
+        private System.Windows.Forms.Label labelInfo;
     }
 }
