@@ -29,22 +29,26 @@
         private void InitializeComponent()
         {
             this.dtGridViewEstoque = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAdicionarSaldo = new System.Windows.Forms.Button();
+            this.btnRetiraSaldo = new System.Windows.Forms.Button();
             this.btnVoltarEstoque = new System.Windows.Forms.Button();
             this.txtProduto = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.labelCodigo = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelProduto = new System.Windows.Forms.Label();
             this.txtQtd = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelQuantidade = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnExcluirProduto = new System.Windows.Forms.Button();
+            this.btnNovoProduto = new System.Windows.Forms.Button();
             this.txtDescricaoProduto = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelDescricao = new System.Windows.Forms.Label();
+            this.comboBoxTipoProduto = new System.Windows.Forms.ComboBox();
+            this.textBoxPreco = new System.Windows.Forms.TextBox();
+            this.labelTipo = new System.Windows.Forms.Label();
+            this.labelPreco = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridViewEstoque)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -63,27 +67,27 @@
             this.dtGridViewEstoque.Size = new System.Drawing.Size(877, 382);
             this.dtGridViewEstoque.TabIndex = 4;
             // 
-            // button1
+            // btnAdicionarSaldo
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(662, 89);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 29);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Adicionar Saldo";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAdicionarSaldo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdicionarSaldo.Location = new System.Drawing.Point(662, 89);
+            this.btnAdicionarSaldo.Name = "btnAdicionarSaldo";
+            this.btnAdicionarSaldo.Size = new System.Drawing.Size(98, 29);
+            this.btnAdicionarSaldo.TabIndex = 7;
+            this.btnAdicionarSaldo.Text = "Adicionar Saldo";
+            this.btnAdicionarSaldo.UseVisualStyleBackColor = true;
+            this.btnAdicionarSaldo.Click += new System.EventHandler(this.btnAdicionarSaldo_Click);
             // 
-            // button3
+            // btnRetiraSaldo
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(792, 88);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 30);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Retirar Saldo";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnRetiraSaldo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRetiraSaldo.Location = new System.Drawing.Point(792, 88);
+            this.btnRetiraSaldo.Name = "btnRetiraSaldo";
+            this.btnRetiraSaldo.Size = new System.Drawing.Size(98, 30);
+            this.btnRetiraSaldo.TabIndex = 8;
+            this.btnRetiraSaldo.Text = "Retirar Saldo";
+            this.btnRetiraSaldo.UseVisualStyleBackColor = true;
+            this.btnRetiraSaldo.Click += new System.EventHandler(this.btnRetiraSaldo_Click);
             // 
             // btnVoltarEstoque
             // 
@@ -100,67 +104,67 @@
             // txtProduto
             // 
             this.txtProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtProduto.Location = new System.Drawing.Point(16, 89);
+            this.txtProduto.Location = new System.Drawing.Point(18, 89);
             this.txtProduto.Name = "txtProduto";
-            this.txtProduto.Size = new System.Drawing.Size(580, 20);
+            this.txtProduto.Size = new System.Drawing.Size(336, 20);
             this.txtProduto.TabIndex = 2;
             // 
-            // button6
+            // btnPesquisar
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.Location = new System.Drawing.Point(513, 135);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(83, 20);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Pesquisar";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPesquisar.Location = new System.Drawing.Point(552, 134);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(83, 21);
+            this.btnPesquisar.TabIndex = 3;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
-            // label1
+            // labelCodigo
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(323, 119);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Codigo";
+            this.labelCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelCodigo.AutoSize = true;
+            this.labelCodigo.Location = new System.Drawing.Point(19, 118);
+            this.labelCodigo.Name = "labelCodigo";
+            this.labelCodigo.Size = new System.Drawing.Size(40, 13);
+            this.labelCodigo.TabIndex = 12;
+            this.labelCodigo.Text = "Codigo";
             // 
             // txtCodigo
             // 
             this.txtCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCodigo.Location = new System.Drawing.Point(326, 135);
+            this.txtCodigo.Location = new System.Drawing.Point(19, 134);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(162, 20);
             this.txtCodigo.TabIndex = 1;
             // 
-            // label2
+            // labelProduto
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Produto";
+            this.labelProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelProduto.AutoSize = true;
+            this.labelProduto.Location = new System.Drawing.Point(15, 73);
+            this.labelProduto.Name = "labelProduto";
+            this.labelProduto.Size = new System.Drawing.Size(44, 13);
+            this.labelProduto.TabIndex = 14;
+            this.labelProduto.Text = "Produto";
             // 
             // txtQtd
             // 
             this.txtQtd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtQtd.Location = new System.Drawing.Point(16, 135);
+            this.txtQtd.Location = new System.Drawing.Point(370, 88);
             this.txtQtd.Name = "txtQtd";
-            this.txtQtd.Size = new System.Drawing.Size(282, 20);
+            this.txtQtd.Size = new System.Drawing.Size(265, 20);
             this.txtQtd.TabIndex = 6;
             // 
-            // label5
+            // labelQuantidade
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 119);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 13);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Quantidade";
+            this.labelQuantidade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelQuantidade.AutoSize = true;
+            this.labelQuantidade.Location = new System.Drawing.Point(367, 72);
+            this.labelQuantidade.Name = "labelQuantidade";
+            this.labelQuantidade.Size = new System.Drawing.Size(62, 13);
+            this.labelQuantidade.TabIndex = 19;
+            this.labelQuantidade.Text = "Quantidade";
             // 
             // panel1
             // 
@@ -170,40 +174,40 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Location = new System.Drawing.Point(15, 10);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(878, 59);
+            this.panel1.Size = new System.Drawing.Size(878, 49);
             this.panel1.TabIndex = 21;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(395, 14);
+            this.label6.Location = new System.Drawing.Point(381, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 25);
             this.label6.TabIndex = 0;
             this.label6.Text = "Estoque";
             // 
-            // button2
+            // btnExcluirProduto
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(792, 124);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 30);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Excluir Produto ";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.btnExcluirProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExcluirProduto.Location = new System.Drawing.Point(792, 124);
+            this.btnExcluirProduto.Name = "btnExcluirProduto";
+            this.btnExcluirProduto.Size = new System.Drawing.Size(98, 30);
+            this.btnExcluirProduto.TabIndex = 22;
+            this.btnExcluirProduto.Text = "Excluir Produto ";
+            this.btnExcluirProduto.UseVisualStyleBackColor = true;
+            this.btnExcluirProduto.Click += new System.EventHandler(this.btnExcluirProduto_Click_1);
             // 
-            // button4
+            // btnNovoProduto
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(662, 124);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(98, 31);
-            this.button4.TabIndex = 23;
-            this.button4.Text = "Novo Produto";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnNovoProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNovoProduto.Location = new System.Drawing.Point(662, 124);
+            this.btnNovoProduto.Name = "btnNovoProduto";
+            this.btnNovoProduto.Size = new System.Drawing.Size(98, 31);
+            this.btnNovoProduto.TabIndex = 23;
+            this.btnNovoProduto.Text = "Novo Produto";
+            this.btnNovoProduto.UseVisualStyleBackColor = true;
+            this.btnNovoProduto.Click += new System.EventHandler(this.btnNovoProduto_Click);
             // 
             // txtDescricaoProduto
             // 
@@ -214,16 +218,56 @@
             this.txtDescricaoProduto.TabIndex = 24;
             this.txtDescricaoProduto.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // label3
+            // labelDescricao
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 168);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 13);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "Descrição do Produto";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.labelDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelDescricao.AutoSize = true;
+            this.labelDescricao.Location = new System.Drawing.Point(16, 168);
+            this.labelDescricao.Name = "labelDescricao";
+            this.labelDescricao.Size = new System.Drawing.Size(110, 13);
+            this.labelDescricao.TabIndex = 25;
+            this.labelDescricao.Text = "Descrição do Produto";
+            this.labelDescricao.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // comboBoxTipoProduto
+            // 
+            this.comboBoxTipoProduto.FormattingEnabled = true;
+            this.comboBoxTipoProduto.Items.AddRange(new object[] {
+            "Legumes",
+            "Verduras",
+            "Frutas"});
+            this.comboBoxTipoProduto.Location = new System.Drawing.Point(203, 134);
+            this.comboBoxTipoProduto.Name = "comboBoxTipoProduto";
+            this.comboBoxTipoProduto.Size = new System.Drawing.Size(151, 21);
+            this.comboBoxTipoProduto.TabIndex = 26;
+            // 
+            // textBoxPreco
+            // 
+            this.textBoxPreco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxPreco.Location = new System.Drawing.Point(370, 134);
+            this.textBoxPreco.Name = "textBoxPreco";
+            this.textBoxPreco.Size = new System.Drawing.Size(162, 20);
+            this.textBoxPreco.TabIndex = 27;
+            // 
+            // labelTipo
+            // 
+            this.labelTipo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTipo.AutoSize = true;
+            this.labelTipo.Location = new System.Drawing.Point(200, 118);
+            this.labelTipo.Name = "labelTipo";
+            this.labelTipo.Size = new System.Drawing.Size(28, 13);
+            this.labelTipo.TabIndex = 28;
+            this.labelTipo.Text = "Tipo";
+            // 
+            // labelPreco
+            // 
+            this.labelPreco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPreco.AutoSize = true;
+            this.labelPreco.Location = new System.Drawing.Point(367, 118);
+            this.labelPreco.Name = "labelPreco";
+            this.labelPreco.Size = new System.Drawing.Size(35, 13);
+            this.labelPreco.TabIndex = 29;
+            this.labelPreco.Text = "Preço";
             // 
             // FrmEstoque
             // 
@@ -231,21 +275,25 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(905, 681);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelPreco);
+            this.Controls.Add(this.labelTipo);
+            this.Controls.Add(this.textBoxPreco);
+            this.Controls.Add(this.comboBoxTipoProduto);
+            this.Controls.Add(this.labelDescricao);
             this.Controls.Add(this.txtDescricaoProduto);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnNovoProduto);
+            this.Controls.Add(this.btnExcluirProduto);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtQtd);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelQuantidade);
+            this.Controls.Add(this.labelProduto);
             this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.labelCodigo);
+            this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.txtProduto);
             this.Controls.Add(this.btnVoltarEstoque);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRetiraSaldo);
+            this.Controls.Add(this.btnAdicionarSaldo);
             this.Controls.Add(this.dtGridViewEstoque);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -264,21 +312,25 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dtGridViewEstoque;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAdicionarSaldo;
+        private System.Windows.Forms.Button btnRetiraSaldo;
         private System.Windows.Forms.Button btnVoltarEstoque;
         private System.Windows.Forms.TextBox txtProduto;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.Label labelCodigo;
         private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelProduto;
         private System.Windows.Forms.TextBox txtQtd;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelQuantidade;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnExcluirProduto;
+        private System.Windows.Forms.Button btnNovoProduto;
         private System.Windows.Forms.TextBox txtDescricaoProduto;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelDescricao;
+        private System.Windows.Forms.ComboBox comboBoxTipoProduto;
+        private System.Windows.Forms.TextBox textBoxPreco;
+        private System.Windows.Forms.Label labelTipo;
+        private System.Windows.Forms.Label labelPreco;
     }
 }

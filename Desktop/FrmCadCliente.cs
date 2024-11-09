@@ -41,6 +41,10 @@ namespace Desktop
                 return; 
             }
 
+            string cnpj = maskCnpj.Text.Replace(".","").Replace("-", "");
+            if (cnpj.Length != 14)
+                MessageBox.Show("O CNPJ deve conter 14 digitos.");
+
             SqlConnection conexao = new SqlConnection(@"Data Source=34.171.87.74;Initial Catalog=GREENLIFE_BD;Persist Security Info=True;User ID=sqlserver;Password=Pipizinhobolado@;Encrypt=False");
 
 
@@ -92,10 +96,7 @@ namespace Desktop
 
         }
 
-        private void maskCnpj_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
+        
 
         private void btnVoltarCliente_Click(object sender, EventArgs e)
         {

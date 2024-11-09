@@ -30,24 +30,24 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxNomeFuncionario = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelNome = new System.Windows.Forms.Label();
+            this.labelSexo = new System.Windows.Forms.Label();
             this.radioButtonMasculino = new System.Windows.Forms.RadioButton();
             this.radioButtonFeminino = new System.Windows.Forms.RadioButton();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelCPF = new System.Windows.Forms.Label();
             this.maskedTextBoxCpfFuncionario = new System.Windows.Forms.MaskedTextBox();
             this.textBoxUsuarioFuncionario = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelNomeUsuario = new System.Windows.Forms.Label();
+            this.labelSenha = new System.Windows.Forms.Label();
             this.textBoxSenhaFuncionario = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.labelSetor = new System.Windows.Forms.Label();
             this.comboBoxSetor = new System.Windows.Forms.ComboBox();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnCadastroFuncionario = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.maskedTextBoxIdFuncionario = new System.Windows.Forms.MaskedTextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.labelCodFuncionario = new System.Windows.Forms.Label();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,25 +73,25 @@
             this.textBoxNomeFuncionario.Size = new System.Drawing.Size(683, 20);
             this.textBoxNomeFuncionario.TabIndex = 1;
             // 
-            // label2
+            // labelNome
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(97, 138);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Nome";
+            this.labelNome.AutoSize = true;
+            this.labelNome.Location = new System.Drawing.Point(97, 138);
+            this.labelNome.Name = "labelNome";
+            this.labelNome.Size = new System.Drawing.Size(35, 13);
+            this.labelNome.TabIndex = 2;
+            this.labelNome.Text = "Nome";
             // 
-            // label3
+            // labelSexo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(636, 199);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Sexo";
+            this.labelSexo.AutoSize = true;
+            this.labelSexo.Location = new System.Drawing.Point(636, 199);
+            this.labelSexo.Name = "labelSexo";
+            this.labelSexo.Size = new System.Drawing.Size(31, 13);
+            this.labelSexo.TabIndex = 3;
+            this.labelSexo.Text = "Sexo";
             // 
             // radioButtonMasculino
             // 
@@ -116,16 +116,16 @@
             this.radioButtonFeminino.UseVisualStyleBackColor = true;
             this.radioButtonFeminino.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // label4
+            // labelCPF
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelCPF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(97, 198);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "CPF";
+            this.labelCPF.AutoSize = true;
+            this.labelCPF.Location = new System.Drawing.Point(97, 198);
+            this.labelCPF.Name = "labelCPF";
+            this.labelCPF.Size = new System.Drawing.Size(27, 13);
+            this.labelCPF.TabIndex = 7;
+            this.labelCPF.Text = "CPF";
             // 
             // maskedTextBoxCpfFuncionario
             // 
@@ -146,27 +146,27 @@
             this.textBoxUsuarioFuncionario.Size = new System.Drawing.Size(381, 20);
             this.textBoxUsuarioFuncionario.TabIndex = 9;
             // 
-            // label5
+            // labelNomeUsuario
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelNomeUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(246, 385);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Nome de Usuario";
+            this.labelNomeUsuario.AutoSize = true;
+            this.labelNomeUsuario.Location = new System.Drawing.Point(246, 385);
+            this.labelNomeUsuario.Name = "labelNomeUsuario";
+            this.labelNomeUsuario.Size = new System.Drawing.Size(89, 13);
+            this.labelNomeUsuario.TabIndex = 10;
+            this.labelNomeUsuario.Text = "Nome de Usuario";
             // 
-            // label6
+            // labelSenha
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelSenha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(245, 442);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Senha ";
+            this.labelSenha.AutoSize = true;
+            this.labelSenha.Location = new System.Drawing.Point(245, 442);
+            this.labelSenha.Name = "labelSenha";
+            this.labelSenha.Size = new System.Drawing.Size(41, 13);
+            this.labelSenha.TabIndex = 11;
+            this.labelSenha.Text = "Senha ";
             // 
             // textBoxSenhaFuncionario
             // 
@@ -178,16 +178,16 @@
             this.textBoxSenhaFuncionario.TabIndex = 12;
             this.textBoxSenhaFuncionario.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // label7
+            // labelSetor
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelSetor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(99, 312);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Setor ";
+            this.labelSetor.AutoSize = true;
+            this.labelSetor.Location = new System.Drawing.Point(99, 312);
+            this.labelSetor.Name = "labelSetor";
+            this.labelSetor.Size = new System.Drawing.Size(35, 13);
+            this.labelSetor.TabIndex = 13;
+            this.labelSetor.Text = "Setor ";
             // 
             // comboBoxSetor
             // 
@@ -243,26 +243,26 @@
             this.maskedTextBoxIdFuncionario.Size = new System.Drawing.Size(683, 20);
             this.maskedTextBoxIdFuncionario.TabIndex = 21;
             // 
-            // label8
+            // labelCodFuncionario
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelCodFuncionario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(99, 256);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 13);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Código Funcionário ";
+            this.labelCodFuncionario.AutoSize = true;
+            this.labelCodFuncionario.Location = new System.Drawing.Point(99, 256);
+            this.labelCodFuncionario.Name = "labelCodFuncionario";
+            this.labelCodFuncionario.Size = new System.Drawing.Size(101, 13);
+            this.labelCodFuncionario.TabIndex = 20;
+            this.labelCodFuncionario.Text = "Código Funcionário ";
             // 
-            // button3
+            // btnLimpar
             // 
-            this.button3.Location = new System.Drawing.Point(739, 641);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(74, 28);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "Limpar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnLimpar.Location = new System.Drawing.Point(739, 641);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(74, 28);
+            this.btnLimpar.TabIndex = 22;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // FrmCadFuncionario
             // 
@@ -270,24 +270,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(905, 681);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.maskedTextBoxIdFuncionario);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.labelCodFuncionario);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCadastroFuncionario);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.comboBoxSetor);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.labelSetor);
             this.Controls.Add(this.textBoxSenhaFuncionario);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.labelSenha);
+            this.Controls.Add(this.labelNomeUsuario);
             this.Controls.Add(this.textBoxUsuarioFuncionario);
             this.Controls.Add(this.maskedTextBoxCpfFuncionario);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelCPF);
             this.Controls.Add(this.radioButtonFeminino);
             this.Controls.Add(this.radioButtonMasculino);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelSexo);
+            this.Controls.Add(this.labelNome);
             this.Controls.Add(this.textBoxNomeFuncionario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -307,23 +307,23 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxNomeFuncionario;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelNome;
+        private System.Windows.Forms.Label labelSexo;
         private System.Windows.Forms.RadioButton radioButtonMasculino;
         private System.Windows.Forms.RadioButton radioButtonFeminino;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelCPF;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxCpfFuncionario;
         private System.Windows.Forms.TextBox textBoxUsuarioFuncionario;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelNomeUsuario;
+        private System.Windows.Forms.Label labelSenha;
         private System.Windows.Forms.TextBox textBoxSenhaFuncionario;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelSetor;
         private System.Windows.Forms.ComboBox comboBoxSetor;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnCadastroFuncionario;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxIdFuncionario;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label labelCodFuncionario;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }

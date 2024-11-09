@@ -36,7 +36,7 @@ namespace Desktop
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnRetiraSaldo_Click(object sender, EventArgs e)
         {
             string codigo = txtCodigo.Text;
             string produto = txtProduto.Text;
@@ -108,15 +108,15 @@ namespace Desktop
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
+        //private void button2_Click(object sender, EventArgs e)
+        //{
 
 
 
 
-        }
+        //}
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btnPesquisar_Click(object sender, EventArgs e)
         {
             conexao.Open();
 
@@ -193,7 +193,7 @@ namespace Desktop
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAdicionarSaldo_Click(object sender, EventArgs e)
         {
             string codigo = txtCodigo.Text;
             string produto = txtProduto.Text;
@@ -257,7 +257,7 @@ namespace Desktop
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnNovoProduto_Click(object sender, EventArgs e)
         {
             // Obter os valores dos campos
             string codigo = txtCodigo.Text;
@@ -328,7 +328,7 @@ namespace Desktop
             }
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void btnExcluirProduto_Click_1(object sender, EventArgs e)
         {
             
             string codigo = txtCodigo.Text;
@@ -407,5 +407,7 @@ namespace Desktop
         {
 
         }
+
+        
     }
 }

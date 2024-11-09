@@ -61,7 +61,13 @@ namespace Desktop
                 return; 
             }
 
-            
+            string cpf = maskedTextBoxCpfFuncionario.Text.Replace(".", "").Replace("-", "");
+            if (cpf.Length != 11)
+            {
+                MessageBox.Show("O CPF deve conter 11 dígitos.");
+                return;
+            }
+
             SqlConnection conexao = new SqlConnection(@"Data Source=34.171.87.74;Initial Catalog=GREENLIFE_BD;Persist Security Info=True;User ID=sqlserver;Password=Pipizinhobolado@;Encrypt=False");
 
             string inserir = "INSERT INTO Colaboradores(Nome, CPF, Sexo, CodigoFuncionario, Setor, Usuario, Senha) VALUES (@Nome, @CPF, @Sexo, @CodigoFuncionario, @Setor, @Usuario, @Senha)";
@@ -171,7 +177,7 @@ namespace Desktop
             this.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnLimpar_Click(object sender, EventArgs e)
         {
             textBoxNomeFuncionario.Clear();
             maskedTextBoxCpfFuncionario.Clear();
