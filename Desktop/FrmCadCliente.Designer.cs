@@ -47,8 +47,6 @@
             this.labelEndereco = new System.Windows.Forms.Label();
             this.labelNumero = new System.Windows.Forms.Label();
             this.textBoxNumero = new System.Windows.Forms.TextBox();
-            this.labelUsuario = new System.Windows.Forms.Label();
-            this.textBoxUserCliente = new System.Windows.Forms.TextBox();
             this.labelSenha = new System.Windows.Forms.Label();
             this.textSenha = new System.Windows.Forms.TextBox();
             this.labelInfo = new System.Windows.Forms.Label();
@@ -57,7 +55,7 @@
             // 
             // maskedTextBoxTell1
             // 
-            this.maskedTextBoxTell1.Location = new System.Drawing.Point(131, 280);
+            this.maskedTextBoxTell1.Location = new System.Drawing.Point(131, 273);
             this.maskedTextBoxTell1.Mask = "(00)00000-0000";
             this.maskedTextBoxTell1.Name = "maskedTextBoxTell1";
             this.maskedTextBoxTell1.Size = new System.Drawing.Size(291, 20);
@@ -66,7 +64,7 @@
             // labelTelefone
             // 
             this.labelTelefone.AutoSize = true;
-            this.labelTelefone.Location = new System.Drawing.Point(128, 264);
+            this.labelTelefone.Location = new System.Drawing.Point(128, 257);
             this.labelTelefone.Name = "labelTelefone";
             this.labelTelefone.Size = new System.Drawing.Size(58, 13);
             this.labelTelefone.TabIndex = 38;
@@ -80,14 +78,14 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 11);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(881, 84);
+            this.panel1.Size = new System.Drawing.Size(881, 58);
             this.panel1.TabIndex = 37;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(311, 26);
+            this.label1.Location = new System.Drawing.Point(313, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(213, 25);
             this.label1.TabIndex = 0;
@@ -117,7 +115,7 @@
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
-            this.labelEmail.Location = new System.Drawing.Point(128, 323);
+            this.labelEmail.Location = new System.Drawing.Point(128, 313);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(35, 13);
             this.labelEmail.TabIndex = 30;
@@ -125,14 +123,14 @@
             // 
             // textEmail
             // 
-            this.textEmail.Location = new System.Drawing.Point(131, 339);
+            this.textEmail.Location = new System.Drawing.Point(131, 329);
             this.textEmail.Name = "textEmail";
             this.textEmail.Size = new System.Drawing.Size(634, 20);
             this.textEmail.TabIndex = 29;
             // 
             // maskCnpj
             // 
-            this.maskCnpj.Location = new System.Drawing.Point(131, 222);
+            this.maskCnpj.Location = new System.Drawing.Point(131, 204);
             this.maskCnpj.Mask = "00.000.000.0000-00";
             this.maskCnpj.Name = "maskCnpj";
             this.maskCnpj.Size = new System.Drawing.Size(634, 20);
@@ -142,7 +140,7 @@
             // labelCNPJ
             // 
             this.labelCNPJ.AutoSize = true;
-            this.labelCNPJ.Location = new System.Drawing.Point(128, 206);
+            this.labelCNPJ.Location = new System.Drawing.Point(128, 188);
             this.labelCNPJ.Name = "labelCNPJ";
             this.labelCNPJ.Size = new System.Drawing.Size(34, 13);
             this.labelCNPJ.TabIndex = 27;
@@ -151,7 +149,7 @@
             // labelNome
             // 
             this.labelNome.AutoSize = true;
-            this.labelNome.Location = new System.Drawing.Point(128, 153);
+            this.labelNome.Location = new System.Drawing.Point(128, 131);
             this.labelNome.Name = "labelNome";
             this.labelNome.Size = new System.Drawing.Size(35, 13);
             this.labelNome.TabIndex = 23;
@@ -159,7 +157,7 @@
             // 
             // textBoxNomeCliente
             // 
-            this.textBoxNomeCliente.Location = new System.Drawing.Point(131, 169);
+            this.textBoxNomeCliente.Location = new System.Drawing.Point(131, 147);
             this.textBoxNomeCliente.Name = "textBoxNomeCliente";
             this.textBoxNomeCliente.Size = new System.Drawing.Size(634, 20);
             this.textBoxNomeCliente.TabIndex = 22;
@@ -176,7 +174,7 @@
             // 
             // maskedTextBoxTellOp
             // 
-            this.maskedTextBoxTellOp.Location = new System.Drawing.Point(474, 280);
+            this.maskedTextBoxTellOp.Location = new System.Drawing.Point(474, 273);
             this.maskedTextBoxTellOp.Mask = "(00)00000-0000";
             this.maskedTextBoxTellOp.Name = "maskedTextBoxTellOp";
             this.maskedTextBoxTellOp.Size = new System.Drawing.Size(291, 20);
@@ -185,7 +183,7 @@
             // labelTelOp
             // 
             this.labelTelOp.AutoSize = true;
-            this.labelTelOp.Location = new System.Drawing.Point(471, 264);
+            this.labelTelOp.Location = new System.Drawing.Point(471, 257);
             this.labelTelOp.Name = "labelTelOp";
             this.labelTelOp.Size = new System.Drawing.Size(58, 13);
             this.labelTelOp.TabIndex = 41;
@@ -224,26 +222,10 @@
             this.textBoxNumero.Size = new System.Drawing.Size(195, 20);
             this.textBoxNumero.TabIndex = 46;
             // 
-            // labelUsuario
-            // 
-            this.labelUsuario.AutoSize = true;
-            this.labelUsuario.Location = new System.Drawing.Point(177, 444);
-            this.labelUsuario.Name = "labelUsuario";
-            this.labelUsuario.Size = new System.Drawing.Size(43, 13);
-            this.labelUsuario.TabIndex = 48;
-            this.labelUsuario.Text = "Usúario";
-            // 
-            // textBoxUserCliente
-            // 
-            this.textBoxUserCliente.Location = new System.Drawing.Point(180, 460);
-            this.textBoxUserCliente.Name = "textBoxUserCliente";
-            this.textBoxUserCliente.Size = new System.Drawing.Size(388, 20);
-            this.textBoxUserCliente.TabIndex = 47;
-            // 
             // labelSenha
             // 
             this.labelSenha.AutoSize = true;
-            this.labelSenha.Location = new System.Drawing.Point(177, 500);
+            this.labelSenha.Location = new System.Drawing.Point(128, 465);
             this.labelSenha.Name = "labelSenha";
             this.labelSenha.Size = new System.Drawing.Size(38, 13);
             this.labelSenha.TabIndex = 50;
@@ -252,7 +234,7 @@
             // 
             // textSenha
             // 
-            this.textSenha.Location = new System.Drawing.Point(180, 516);
+            this.textSenha.Location = new System.Drawing.Point(131, 481);
             this.textSenha.Name = "textSenha";
             this.textSenha.PasswordChar = '*';
             this.textSenha.Size = new System.Drawing.Size(388, 20);
@@ -261,7 +243,7 @@
             // labelInfo
             // 
             this.labelInfo.AutoSize = true;
-            this.labelInfo.Location = new System.Drawing.Point(716, 264);
+            this.labelInfo.Location = new System.Drawing.Point(716, 257);
             this.labelInfo.Name = "labelInfo";
             this.labelInfo.Size = new System.Drawing.Size(55, 13);
             this.labelInfo.TabIndex = 51;
@@ -277,8 +259,6 @@
             this.Controls.Add(this.labelInfo);
             this.Controls.Add(this.labelSenha);
             this.Controls.Add(this.textSenha);
-            this.Controls.Add(this.labelUsuario);
-            this.Controls.Add(this.textBoxUserCliente);
             this.Controls.Add(this.textBoxNumero);
             this.Controls.Add(this.labelNumero);
             this.Controls.Add(this.labelEndereco);
@@ -331,8 +311,6 @@
         private System.Windows.Forms.Label labelEndereco;
         private System.Windows.Forms.Label labelNumero;
         private System.Windows.Forms.TextBox textBoxNumero;
-        private System.Windows.Forms.Label labelUsuario;
-        private System.Windows.Forms.TextBox textBoxUserCliente;
         private System.Windows.Forms.Label labelSenha;
         private System.Windows.Forms.TextBox textSenha;
         private System.Windows.Forms.Label labelInfo;

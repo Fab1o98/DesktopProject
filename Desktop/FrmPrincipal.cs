@@ -48,6 +48,7 @@ namespace Desktop
 
  
         }
+
         private void button6_Click(object sender, EventArgs e)
         {
 
@@ -116,6 +117,23 @@ namespace Desktop
             FormShow(new FrmCadCliente());
         }
 
-      
+        private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           
+            DialogResult resultado = MessageBox.Show(
+            "Tem certeza que deseja fechar a janela?",
+            "Confirmação de Fechamento",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+
+            // Verifica a resposta do usuário
+            if (resultado == DialogResult.No)
+            {
+                // Cancela o fechamento do formulário se o usuário escolher "Não"
+                e.Cancel = true;
+            }
+               // Se o usuário escolher "Sim", o formulário será fechado normalmente sem precisar de Application.Exit()
+        
+        }
     }
 }

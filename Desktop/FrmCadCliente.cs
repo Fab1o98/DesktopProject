@@ -34,7 +34,6 @@ namespace Desktop
                 string.IsNullOrWhiteSpace(textBoxEndereco.Text) ||
                 string.IsNullOrWhiteSpace(textBoxNumero.Text) ||
                 string.IsNullOrWhiteSpace(textEmail.Text) ||
-                string.IsNullOrWhiteSpace(textBoxUserCliente.Text) ||
                 string.IsNullOrWhiteSpace(textSenha.Text))
             {
                 MessageBox.Show("Digite os campos necessários.");
@@ -61,7 +60,6 @@ namespace Desktop
                 conectar.Parameters.Add(new SqlParameter("@Endereço", this.textBoxEndereco.Text));
                 conectar.Parameters.Add(new SqlParameter("@Numero", this.textBoxNumero.Text));
                 conectar.Parameters.Add(new SqlParameter("@Email", this.textEmail.Text));
-                //conectar.Parameters.Add(new SqlParameter("@Usuario", this.textBoxUserCliente.Text));
                 conectar.Parameters.Add(new SqlParameter("@Senha", this.textSenha.Text));
 
                 conexao.Open();
@@ -112,7 +110,6 @@ namespace Desktop
             textEmail.Clear();
             textBoxEndereco.Clear();
             textBoxNumero.Clear();
-            textBoxUserCliente.Clear();
             textSenha.Clear();
         }
 
