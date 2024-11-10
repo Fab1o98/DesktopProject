@@ -48,7 +48,7 @@ namespace Desktop
             SqlConnection conexao = new SqlConnection(@"Data Source=34.171.87.74;Initial Catalog=GREENLIFE_BD;Persist Security Info=True;User ID=sqlserver;Password=Pipizinhobolado@;Encrypt=False");
 
 
-            string inserir = "INSERT INTO Cadastro(Nome, CNPJ, Telefone, TelefoneOpcional, Endereço, Numero, Email, Usuario, Senha) VALUES (@Nome, @CNPJ, @Telefone, @TelefoneOpcional, @Endereço, @Numero, @Email, @Usuario, @Senha)";
+            string inserir = "INSERT INTO Cadastro(Nome, CNPJ, Telefone, TelefoneOpcional, Endereço, Numero, Email, Senha) VALUES (@Nome, @CNPJ, @Telefone, @TelefoneOpcional, @Endereço, @Numero, @Email, @Senha)";
 
             try
             {
@@ -61,7 +61,7 @@ namespace Desktop
                 conectar.Parameters.Add(new SqlParameter("@Endereço", this.textBoxEndereco.Text));
                 conectar.Parameters.Add(new SqlParameter("@Numero", this.textBoxNumero.Text));
                 conectar.Parameters.Add(new SqlParameter("@Email", this.textEmail.Text));
-                conectar.Parameters.Add(new SqlParameter("@Usuario", this.textBoxUserCliente.Text));
+                //conectar.Parameters.Add(new SqlParameter("@Usuario", this.textBoxUserCliente.Text));
                 conectar.Parameters.Add(new SqlParameter("@Senha", this.textSenha.Text));
 
                 conexao.Open();

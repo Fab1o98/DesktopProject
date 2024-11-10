@@ -36,6 +36,27 @@ namespace Desktop
 
         }
 
+        private void LimparCampos()
+        {
+            // Percorre todos os controles no formulário
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is TextBox)
+                {
+                    ((TextBox)ctrl).Clear(); // Limpa os campos TextBox
+                }
+                else if (ctrl is ComboBox)
+                {
+                    ((ComboBox)ctrl).SelectedIndex = -1; // Limpa a seleção do ComboBox
+                }
+                else if (ctrl is MaskedTextBox)
+                {
+                    ((MaskedTextBox)ctrl).Clear(); // Limpa os campos MaskedTextBox
+                }
+                // Adicione outros tipos de controles que você deseja limpar, se necessário
+            }
+        }
+
         private void btnRetiraSaldo_Click(object sender, EventArgs e)
         {
             string codigo = txtCodigo.Text;
@@ -92,8 +113,9 @@ namespace Desktop
                         cmdAtualizarSaldo.Parameters.AddWithValue("@Id", codigo);
                         cmdAtualizarSaldo.Parameters.AddWithValue("@Nome", produto);
                         cmdAtualizarSaldo.ExecuteNonQuery();
-
+                        LimparCampos();
                         MessageBox.Show("Saldo retirado com sucesso!");
+                        
                     }
                 }
             }
@@ -121,33 +143,36 @@ namespace Desktop
             conexao.Open();
 
             // Variável para armazenar a consulta SQL
-            string mostraDados;
+            string mostraDados = "SELECT * FROM Produtos WHERE 1=1"; // Inicia com condição sempre verdadeira
 
-            // Verificando se a pesquisa é numérica (pesquisa por Id)
+            // Adiciona condições de pesquisa com base na entrada do usuário
             if (int.TryParse(txtCodigo.Text, out int idPesquisa))
             {
-                // Consulta SQL para buscar somente pelo Id
-                mostraDados = "SELECT * FROM Produtos WHERE Id = @Id";
+                mostraDados += " AND Id = @Id";
             }
-            else
+            if (!string.IsNullOrWhiteSpace(txtProduto.Text))
             {
-                // Consulta SQL para buscar pelo nome do produto
-                mostraDados = "SELECT * FROM Produtos WHERE Nome LIKE @Nome";
+                mostraDados += " AND Nome LIKE @Nome";
             }
-
+            if (comboBoxTipoProduto.SelectedItem != null && !string.IsNullOrWhiteSpace(comboBoxTipoProduto.SelectedItem.ToString()))
+            {
+                mostraDados += " AND Categoria = @Categoria";
+            }
 
             SqlCommand cmd = new SqlCommand(mostraDados, conexao);
 
-            // Adicionando os parâmetros corretos de acordo com o tipo de pesquisa
+            // Adiciona os parâmetros de acordo com os campos preenchidos
             if (int.TryParse(txtCodigo.Text, out idPesquisa))
             {
-                // Se for numérico, usamos o Id
                 cmd.Parameters.AddWithValue("@Id", idPesquisa);
             }
-            else
+            if (!string.IsNullOrWhiteSpace(txtProduto.Text))
             {
-                // Se não for numérico, usamos o nome (usando LIKE para busca parcial)
                 cmd.Parameters.AddWithValue("@Nome", "%" + txtProduto.Text + "%");
+            }
+            if (comboBoxTipoProduto.SelectedItem != null && !string.IsNullOrWhiteSpace(comboBoxTipoProduto.SelectedItem.ToString()))
+            {
+                cmd.Parameters.AddWithValue("@Categoria", comboBoxTipoProduto.SelectedItem.ToString());
             }
 
             // Executando o comando e preenchendo o DataTable
@@ -155,43 +180,41 @@ namespace Desktop
             DataTable dt = new DataTable();
             exibir.Fill(dt);
 
-            // Verificando se há resultados
+            // Verificação de resultados
             if (dt.Rows.Count > 0)
             {
-                // Se o usuário digitou um Id e um Nome, validar se eles correspondem ao mesmo produto
-                if (int.TryParse(txtCodigo.Text, out idPesquisa) && !string.IsNullOrWhiteSpace(txtProduto.Text))
+                // Se o usuário forneceu Id, Nome e Tipo, validar correspondência dos dados
+                if (int.TryParse(txtCodigo.Text, out idPesquisa) && !string.IsNullOrWhiteSpace(txtProduto.Text) && comboBoxTipoProduto.SelectedItem != null && !string.IsNullOrWhiteSpace(comboBoxTipoProduto.SelectedItem.ToString()))
                 {
-                    // Procurar o produto que tenha o Id e o Nome
-                    DataRow[] resultado = dt.Select("Id = " + idPesquisa + " AND Nome LIKE '%" + txtProduto.Text + "%'");
+                    // Verifica se há correspondência de Id, Nome e Tipo
+                    DataRow[] resultado = dt.Select($"Id = {idPesquisa} AND Nome LIKE '%{txtProduto.Text}%' AND Categoria = '{comboBoxTipoProduto.SelectedItem}'");
 
-                    // Se não houver resultados que correspondam ao Id e ao Nome, exibir erro
+                    // Se não houver correspondência exata, exibe mensagem de erro
                     if (resultado.Length == 0)
                     {
-                        MessageBox.Show("Este código não pertence ao produto.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Produto não encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        // Exibir o produto correspondente
+                        // Exibe os resultados correspondentes
                         dtGridViewEstoque.DataSource = resultado.CopyToDataTable();
                     }
                 }
                 else
                 {
-                    // Se a busca foi feita somente pelo Id, exibir apenas o resultado correspondente
-                    dtGridViewEstoque.DataSource = dt;  // Neste caso, dt só deve ter um resultado se o Id foi buscado
+                    // Exibe os resultados caso a busca não envolva todos os campos ou tenha outros critérios
+                    dtGridViewEstoque.DataSource = dt;
                 }
             }
             else
             {
-                // Se não encontrar resultados, exibir mensagem de erro
+                // Exibe mensagem caso nenhum produto seja encontrado
                 MessageBox.Show("Nenhum produto encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             conexao.Close();
-
-
-
         }
+
 
         private void btnAdicionarSaldo_Click(object sender, EventArgs e)
         {
@@ -240,8 +263,9 @@ namespace Desktop
                         cmdAtualizarSaldo.Parameters.AddWithValue("@Id", codigo);
                         cmdAtualizarSaldo.Parameters.AddWithValue("@Nome", produto);
                         cmdAtualizarSaldo.ExecuteNonQuery();
-
+                        LimparCampos();
                         MessageBox.Show("Saldo adicionado com sucesso!");
+
                     }
                 }
                 catch (Exception ex)
@@ -264,11 +288,14 @@ namespace Desktop
             string produto = txtProduto.Text;
             string quantidadeTexto = txtQtd.Text;
             string descricaoProduto = txtDescricaoProduto.Text;
+            string precoTexto = textBoxPreco.Text; // Campo de preço
+            string tipoProduto = comboBoxTipoProduto.SelectedItem?.ToString(); // Obter o tipo do ComboBox
 
             // Validação básica para campos vazios
-            if (string.IsNullOrWhiteSpace(produto))
+            if (string.IsNullOrWhiteSpace(produto) || string.IsNullOrWhiteSpace(descricaoProduto) ||
+                string.IsNullOrWhiteSpace(precoTexto) || string.IsNullOrWhiteSpace(tipoProduto))
             {
-                MessageBox.Show("Preencha os campos Código e Produto.");
+                MessageBox.Show("Preencha todos os campos obrigatórios(*). ");
                 return;
             }
 
@@ -285,48 +312,54 @@ namespace Desktop
                 return;
             }
 
-
+            decimal preco;
+            if (!decimal.TryParse(precoTexto, out preco) || preco < 0)
             {
-                try
+                MessageBox.Show("Preço deve ser um número válido e não negativo.");
+                return;
+            }
+
+            try
+            {
+                conexao.Open();
+
+                // Verificar se já existe um produto com o mesmo nome no banco de dados
+                string queryVerificarNome = "SELECT COUNT(*) FROM Produtos WHERE Nome = @Nome";
+                SqlCommand cmdVerificarNome = new SqlCommand(queryVerificarNome, conexao);
+                cmdVerificarNome.Parameters.AddWithValue("@Nome", produto);
+
+                int produtoExistente = (int)cmdVerificarNome.ExecuteScalar();
+
+                if (produtoExistente > 0)
                 {
-                    conexao.Open();
-
-                    // Verificar se já existe um produto com o mesmo nome no banco de dados
-                    string queryVerificarNome = "SELECT COUNT(*) FROM Produtos WHERE Nome = @Nome";
-                    SqlCommand cmdVerificarNome = new SqlCommand(queryVerificarNome, conexao);
-                    cmdVerificarNome.Parameters.AddWithValue("@Nome", produto);
-
-                    int produtoExistente = (int)cmdVerificarNome.ExecuteScalar();
-
-                    if (produtoExistente > 0)
-                    {
-                        // Produto com o mesmo nome já existe
-                        MessageBox.Show("Esse produto já existe.");
-                    }
-                    else
-                    {
-                        // Produto não existe, inserir novo produto no estoque
-                        string queryInserir = "INSERT INTO Produtos (Nome, qtd_kg,Descricao) VALUES ( @Nome, @qtd_kg, @Descricao)";
-                        SqlCommand cmdInserir = new SqlCommand(queryInserir, conexao);
-                        cmdInserir.Parameters.AddWithValue("@Nome", produto);
-                        cmdInserir.Parameters.AddWithValue("@qtd_kg", quantidade);
-                        cmdInserir.Parameters.AddWithValue("@Descricao", descricaoProduto);
-                        cmdInserir.ExecuteNonQuery();
-
-                        MessageBox.Show("Produto inserido e saldo adicionado com sucesso!");
-                    }
+                    // Produto com o mesmo nome já existe
+                    MessageBox.Show("Esse produto já existe.");
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Erro ao conectar com o banco de dados: " + ex.Message);
+                    // Produto não existe, inserir novo produto no estoque
+                    string queryInserir = "INSERT INTO Produtos (Nome, qtd_kg, Descricao, Preco, Categoria) VALUES (@Nome, @qtd_kg, @Descricao, @Preco, @Categoria)";
+                    SqlCommand cmdInserir = new SqlCommand(queryInserir, conexao);
+                    cmdInserir.Parameters.AddWithValue("@Nome", produto);
+                    cmdInserir.Parameters.AddWithValue("@qtd_kg", quantidade);
+                    cmdInserir.Parameters.AddWithValue("@Descricao", descricaoProduto);
+                    cmdInserir.Parameters.AddWithValue("@Preco", preco);
+                    cmdInserir.Parameters.AddWithValue("@Categoria", tipoProduto);
+                    cmdInserir.ExecuteNonQuery();
+                    LimparCampos();
+                    MessageBox.Show("Produto inserido e saldo adicionado com sucesso!");
                 }
-                finally
-                {
-                    conexao.Close();
-                }
-
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao conectar com o banco de dados: " + ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
             }
         }
+
 
         private void btnExcluirProduto_Click_1(object sender, EventArgs e)
         {
@@ -372,13 +405,12 @@ namespace Desktop
                     else
                     {
                         // Produto encontrado, realizar exclusão
-                        string queryExcluir = "DELETE FROM Produtos WHERE Id = @Id AND Nome = @Nome ";//AND qtd_kg = @qtd_kg
+                        string queryExcluir = "DELETE FROM Produtos WHERE Id = @Id AND Nome = @Nome ";
                         SqlCommand cmdExcluir = new SqlCommand(queryExcluir, conexao);
                         cmdExcluir.Parameters.AddWithValue("@Id", codigo);
                         cmdExcluir.Parameters.AddWithValue("@Nome", produto);
-                        // cmdExcluir.Parameters.AddWithValue("@qtd_kg", quantidade);
                         cmdExcluir.ExecuteNonQuery();
-
+                        LimparCampos();
                         MessageBox.Show("Produto excluído com sucesso!");
                     }
                 }
