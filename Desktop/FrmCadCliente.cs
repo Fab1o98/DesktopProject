@@ -13,21 +13,24 @@ namespace Desktop
 {
     public partial class FrmCadCliente : Form
     {
+        //Caminho para conexão com o banco de dados. 
+        //Comando para executar comandos SQL.
+        //Comando de leitura.
         SqlConnection conexao = new SqlConnection(@"Data Source=34.171.87.74;Initial Catalog=GREENLIFE_BD;Persist Security Info=True;User ID=sqlserver;Password=Pipizinhobolado@;Encrypt=False");
         SqlCommand comando = new SqlCommand();
         SqlDataReader data;
+
+        //Inicializa componente. 
         public FrmCadCliente()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+      
+        //Botão de cadastro de cliente. 
+        private void btnCadastrarCliente_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
+            //Verifica se os campos estão vazios ou em branco. 
             if (string.IsNullOrWhiteSpace(textBoxNomeCliente.Text) ||
                 string.IsNullOrWhiteSpace(maskCnpj.Text) ||
                 string.IsNullOrWhiteSpace(maskedTextBoxTell1.Text) ||
@@ -39,18 +42,17 @@ namespace Desktop
                 MessageBox.Show("Digite os campos necessários.");
                 return; 
             }
-
+            //Verifica se o CNPJ tem 14 digitos, ignorando "-" e ".". 
             string cnpj = maskCnpj.Text.Replace(".","").Replace("-", "");
             if (cnpj.Length != 14)
                 MessageBox.Show("O CNPJ deve conter 14 digitos.");
 
-            SqlConnection conexao = new SqlConnection(@"Data Source=34.171.87.74;Initial Catalog=GREENLIFE_BD;Persist Security Info=True;User ID=sqlserver;Password=Pipizinhobolado@;Encrypt=False");
-
-
+            //String para inserir os dados no banco de dados.
             string inserir = "INSERT INTO Cadastro(Nome, CNPJ, Telefone, TelefoneOpcional, Endereço, Numero, Email, Senha) VALUES (@Nome, @CNPJ, @Telefone, @TelefoneOpcional, @Endereço, @Numero, @Email, @Senha)";
 
             try
             {
+                //Inserindo os dados no banco de dados. 
                 SqlCommand conectar = new SqlCommand(inserir, conexao);
 
                 conectar.Parameters.Add(new SqlParameter("@Nome",this.textBoxNomeCliente.Text));
@@ -61,11 +63,11 @@ namespace Desktop
                 conectar.Parameters.Add(new SqlParameter("@Numero", this.textBoxNumero.Text));
                 conectar.Parameters.Add(new SqlParameter("@Email", this.textEmail.Text));
                 conectar.Parameters.Add(new SqlParameter("@Senha", this.textSenha.Text));
-
+                //Abre conexão. 
                 conexao.Open();
-
+                //Executa o comando de inserir os dados. 
                 conectar.ExecuteNonQuery();
-
+                //Fecha a conexão.
                 conexao.Close();
 
                 MessageBox.Show("Cadastrado com sucesso!");
@@ -75,32 +77,25 @@ namespace Desktop
                 MessageBox.Show("Ocorreu o seguinte erro: " + Erro);
             }
             finally {
+                //Fecha toda a conexão se ainda continuar aberta.
                 conexao.Close(); 
             }
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        // Carregamento do Form
         private void FrmCadCliente_Load(object sender, EventArgs e)
         {
 
         }
 
         
-
+        //Botão voltar ao inicio. 
         private void btnVoltarCliente_Click(object sender, EventArgs e)
         {
+            //Oculta form atual. 
             this.Hide();
         }
-
+        //Botão Limpar campos de preenchimento. 
         private void btnLimparCadastroCliente_Click(object sender, EventArgs e)
         {
             textBoxNomeCliente.Clear();

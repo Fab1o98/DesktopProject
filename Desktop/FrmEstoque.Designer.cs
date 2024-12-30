@@ -216,7 +216,7 @@
             this.txtDescricaoProduto.Name = "txtDescricaoProduto";
             this.txtDescricaoProduto.Size = new System.Drawing.Size(871, 58);
             this.txtDescricaoProduto.TabIndex = 24;
-            this.txtDescricaoProduto.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            
             // 
             // labelDescricao
             // 
@@ -227,7 +227,7 @@
             this.labelDescricao.Size = new System.Drawing.Size(110, 13);
             this.labelDescricao.TabIndex = 25;
             this.labelDescricao.Text = "Descrição do Produto";
-            this.labelDescricao.Click += new System.EventHandler(this.label3_Click);
+            
             // 
             // comboBoxTipoProduto
             // 

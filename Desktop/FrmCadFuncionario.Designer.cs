@@ -114,7 +114,7 @@
             this.radioButtonFeminino.TabStop = true;
             this.radioButtonFeminino.Text = "Feminino";
             this.radioButtonFeminino.UseVisualStyleBackColor = true;
-            this.radioButtonFeminino.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            
             // 
             // labelCPF
             // 
@@ -176,7 +176,7 @@
             this.textBoxSenhaFuncionario.Name = "textBoxSenhaFuncionario";
             this.textBoxSenhaFuncionario.Size = new System.Drawing.Size(381, 20);
             this.textBoxSenhaFuncionario.TabIndex = 12;
-            this.textBoxSenhaFuncionario.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+           
             // 
             // labelSetor
             // 

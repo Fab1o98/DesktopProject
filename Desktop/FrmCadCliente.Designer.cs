@@ -90,7 +90,7 @@
             this.label1.Size = new System.Drawing.Size(213, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro de Clientes";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            
             // 
             // btnCadastrarCliente
             // 
@@ -100,7 +100,7 @@
             this.btnCadastrarCliente.TabIndex = 36;
             this.btnCadastrarCliente.Text = "Cadastrar";
             this.btnCadastrarCliente.UseVisualStyleBackColor = true;
-            this.btnCadastrarCliente.Click += new System.EventHandler(this.button2_Click);
+            this.btnCadastrarCliente.Click += new System.EventHandler(this.btnCadastrarCliente_Click);
             // 
             // btnVoltarCliente
             // 
@@ -204,7 +204,7 @@
             this.labelEndereco.Size = new System.Drawing.Size(53, 13);
             this.labelEndereco.TabIndex = 44;
             this.labelEndereco.Text = "Endereço";
-            this.labelEndereco.Click += new System.EventHandler(this.label6_Click);
+            
             // 
             // labelNumero
             // 
@@ -230,7 +230,7 @@
             this.labelSenha.Size = new System.Drawing.Size(38, 13);
             this.labelSenha.TabIndex = 50;
             this.labelSenha.Text = "Senha";
-            this.labelSenha.Click += new System.EventHandler(this.label10_Click);
+            
             // 
             // textSenha
             // 

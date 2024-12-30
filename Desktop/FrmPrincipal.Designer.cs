@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRelatorio = new System.Windows.Forms.Button();
             this.btnCadCliente = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             this.btnCadFuncionario = new System.Windows.Forms.Button();
             this.btnEstoque = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
@@ -53,7 +53,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.btnRelatorio);
             this.panel1.Controls.Add(this.btnCadCliente);
-            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.btnSair);
             this.panel1.Controls.Add(this.btnCadFuncionario);
             this.panel1.Controls.Add(this.btnEstoque);
             this.panel1.Controls.Add(this.btnInicio);
@@ -90,21 +90,21 @@
             this.btnCadCliente.TabIndex = 7;
             this.btnCadCliente.Text = "Cadastro de Cliente \r\n";
             this.btnCadCliente.UseVisualStyleBackColor = true;
-            this.btnCadCliente.Click += new System.EventHandler(this.button1_Click);
+            this.btnCadCliente.Click += new System.EventHandler(this.btnCadCliente_Click);
             // 
-            // button6
+            // btnSair
             // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.Location = new System.Drawing.Point(0, 654);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(155, 23);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Sair ";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            this.btnSair.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSair.Location = new System.Drawing.Point(0, 654);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(155, 23);
+            this.btnSair.TabIndex = 6;
+            this.btnSair.Text = "Sair ";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click_1);
             // 
             // btnCadFuncionario
             // 
@@ -216,7 +216,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnCadFuncionario;
         private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Button btnInicio;

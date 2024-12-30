@@ -13,42 +13,34 @@ namespace Desktop
 {
     public partial class FrmCadFuncionario : Form
     {
+        // Caminho para conexão com o banco de dados. 
+        // Comando para passar instrução SQL. 
+        // Comando para leitura do banco de dados. 
         SqlConnection conexao = new SqlConnection(@"Data Source=34.171.87.74;Initial Catalog=GREENLIFE_BD;Persist Security Info=True;User ID=sqlserver;Password=Pipizinhobolado@;Encrypt=False");
         SqlCommand comando = new SqlCommand();
         SqlDataReader data;
 
+        //Inicializando Form. 
         public FrmCadFuncionario()
         {
             InitializeComponent();
         }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        // Carregamento do Form.
         private void FrmCadFuncionario_Load(object sender, EventArgs e)
         {
 
         }
-
+       
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
+        // Botão de cadastrar o formulário no banco de dados. 
         private void btnCadastroFuncionario_Click(object sender, EventArgs e)
         {
+            // Verifica se os campos estão vazios. 
             if (string.IsNullOrWhiteSpace(textBoxNomeFuncionario.Text) ||
                 string.IsNullOrWhiteSpace(maskedTextBoxCpfFuncionario.Text) ||
                 (!radioButtonMasculino.Checked && !radioButtonFeminino.Checked) || 
@@ -60,7 +52,7 @@ namespace Desktop
                 MessageBox.Show("Preencha todos os campos.");
                 return; 
             }
-
+            // Verifica se o CPF tem 11 digitos, não contando com "." e "-".
             string cpf = maskedTextBoxCpfFuncionario.Text.Replace(".", "").Replace("-", "");
             if (cpf.Length != 11)
             {
@@ -74,6 +66,7 @@ namespace Desktop
 
             try
             {
+                //Inserir dados no banco de dados. 
                 SqlCommand conectar = new SqlCommand(inserir, conexao);
 
                 
@@ -89,9 +82,11 @@ namespace Desktop
                 conectar.Parameters.Add(new SqlParameter("@Usuario", textBoxUsuarioFuncionario.Text));
                 conectar.Parameters.Add(new SqlParameter("@Senha", textBoxSenhaFuncionario.Text));
 
-                
+                //Abre conexão.
                 conexao.Open();
+                //Executa a inserção dos dados. 
                 conectar.ExecuteNonQuery();
+                //Fecha conexão. 
                 conexao.Close();
 
                 MessageBox.Show("Cadastrado com sucesso!");
@@ -102,81 +97,17 @@ namespace Desktop
             }
             finally
             {
+                // Fecha conexão total do bloco.
                 conexao.Close();
             }
         }
-
-
-        /*private void btnCadastroFuncionario_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(textBoxNomeFuncionario.Text) ||
-                string.IsNullOrWhiteSpace(maskedTextBoxCpfFuncionario.Text) ||
-                string.IsNullOrWhiteSpace(radioButtonMasculino.Text) ||
-                string.IsNullOrWhiteSpace(radioButtonFeminino.Text) ||
-                string.IsNullOrWhiteSpace(maskedTextBoxIdFuncionario.Text) ||
-                string.IsNullOrWhiteSpace(comboBoxSetor.Text) ||
-                string.IsNullOrWhiteSpace(textBoxUsuarioFuncionario.Text) ||
-                string.IsNullOrWhiteSpace(textBoxSenhaFuncionario.Text))
-                    MessageBox.Show("Preencha todos os campos.");
-
-            SqlConnection conexao = new SqlConnection(@"Data Source=34.171.87.74;Initial Catalog=GREENLIFE_BD;Persist Security Info=True;User ID=sqlserver;Password=Pipizinhobolado@;Encrypt=False");
-
-
-            string inserir = "INSERT INTO Colaboradores(Nome, CPF, Sexo, CodigoFuncionario, Setor, Usuario, Senha) VALUES (@Nome, @CPF, @Sexo, @CodigoFuncionario, @Setor, @Usuario, @Senha)";
-
-            try
-            {
-                SqlCommand conectar = new SqlCommand(inserir, conexao);
-                string setor = comboBoxSetor.SelectedItem.ToString();
-                string selecionaSexo = "";
-
-                if (radioButtonMasculino.Checked)
-                {
-                    selecionaSexo = "Masculino";
-                }
-                else if (radioButtonFeminino.Checked)
-                {
-                    selecionaSexo = "Feminino";
-                }
-                else
-                {
-                    MessageBox.Show("Por favor, selecione o sexo.");
-                    return;
-                }
-
-                conectar.Parameters.Add(new SqlParameter("@Nome", this.textBoxNomeFuncionario.Text));
-                conectar.Parameters.Add(new SqlParameter("@CPF", this.maskedTextBoxCpfFuncionario.Text));
-                conectar.Parameters.Add(new SqlParameter("@Sexo", selecionaSexo));
-                conectar.Parameters.Add(new SqlParameter("@CodigoFuncionario", this.maskedTextBoxIdFuncionario.Text));
-                conectar.Parameters.Add(new SqlParameter("@Setor", setor));
-                conectar.Parameters.Add(new SqlParameter("@Usuario", this.textBoxUsuarioFuncionario.Text));
-                conectar.Parameters.Add(new SqlParameter("@Senha", this.textBoxSenhaFuncionario.Text));
-                
-                
-
-                conexao.Open();
-
-                conectar.ExecuteNonQuery();
-
-                conexao.Close();
-
-                MessageBox.Show("Cadastrado com sucesso!");
-            }
-            catch (SqlException erro)
-            {
-                MessageBox.Show("Ocorreu o seguinte erro: " + erro);
-            }
-            finally
-            {
-                conexao.Close();
-            }
-        }*/
-
+        //Botão voltao ao inicio.
         private void btnVoltar_Click(object sender, EventArgs e)
         {
+            // Oculta o Form atual.
             this.Hide();
         }
-
+        // Botão limpar formulário. 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             textBoxNomeFuncionario.Clear();
